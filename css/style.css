@@ -193,8 +193,30 @@ color: #fff;
 
 }
 
-.small-logo{
-	padding:0 32px;
+#loginbtngroup li {
+  margin: 0px;
+}
+
+#loginbtngroup li a {
+  display:inline-block;
+  color: #00796B;
+	text-transform:uppercase;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+  padding:15px;
+  margin: 0;
+  width: 100%;
+}
+
+#loginbtngroup li a:hover{
+	text-decoration:none;
+  border: none;
+}
+
+#loginbtngroup ul {
+  left:-35%;
+  padding: 0;
+  margin-top: 5px;
 }
 
 .main-section{

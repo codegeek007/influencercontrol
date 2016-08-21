@@ -28,6 +28,24 @@
 
 <body>
 
+	<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1779453532302749',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 <div style="text-align:center;display:block;">
 	<div class="container-fluid well well-lg" style="display:block;margin:0px;">
 		<h2 style="color:#00796B;margin:0;letter-spacing: 2px;">Influencer Control</h2>
@@ -87,11 +105,24 @@
 <nav class="main-nav-outer" id="test"><!--main-nav-start-->
 	<div class="container" style="padding-bottom:10px;">
         <ul class="main-nav">
-            <li><a class="hvr-buzz-out" href="#">Login</a></li>
+            <!--<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Login <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+                    <li><a href="#">Brands</a></li>
+										<li class="divider"></li>
+                    <li><a href="#">Influencers</a></li>
+              </ul>
+						</li> -->
             <li><a class="hvr-buzz-out" href="#blog">Blog</a></li>
             <li><a class="hvr-buzz-out" href="#forbrands">Brands</a></li>
             <li><a class="hvr-buzz-out" href="#forinfluencers">Influencers</a></li>
             <li><a class="hvr-buzz-out" href="#contact">Contact</a></li>
+						<div id="loginbtngroup" class="btn-group">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Login <span class="caret"></span></button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="#">Influencers</a></li>
+								<li><a href="#">Brands</a></li>
+							</ul>
+						</div>
         </ul>
     </div>
 </nav><!--main-nav-end-->
@@ -103,6 +134,7 @@
 <section class="main-section" id="forbrands"><!--main-section-start-->
   <div class="container-fluid" style="text-align:center;">
 		<h2>For Brands</h2>
+		<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
   </div>
 </section>
 
@@ -293,7 +325,6 @@
               <div class="team-leader">
                   <div class="team-leader-shadow"><a href="#"></a></div>
                   <img src="img/team-leader-pic2.jpg" alt="">
-                  <ul>#CCC
               </div>
               <h3>Jesse Pinkman</h3>
               <span>Product Manager</span>
